@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول ضرب</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+ این جدول ضرب بسیار ابتدایی هست
+<p style="text-align: center;">این جدول یک جدول ضرب است که برای یادگیری و انجام عملیات‌های ریاضی به آن احتیاج دارید.</p>
+
+<table>
+    <caption>جدول ضرب</caption>
+    <thead>
+        <tr>
+            <th>&times;</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        for ($i = 1; $i <= 10; $i++) {
+            echo "<tr>";
+            echo "<td>$i</td>";
+            for ($j = 1; $j <= 10; $j++) {
+                if ($i == 2 && $j == 5) {
+                    echo "<td><strong>" . ($i * $j) . "</strong></td>";
+                } else {
+                    echo "<td>" . ($i * $j) . "</td>";
+                }
+            }
+            echo "</tr>";
+        }
+        ?>
+    </tbody>
+</table>
+
+</body>
+</html>
